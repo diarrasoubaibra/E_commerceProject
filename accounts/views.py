@@ -7,6 +7,7 @@ def signup(request):
     if request.method == "POST":
         # traitement du form
         username = request.POST.get("username")
+        email = request.POST.get("email")
         password = request.POST.get("password")
         user = User.objects.create_user(username=username,
                                         password=password)
